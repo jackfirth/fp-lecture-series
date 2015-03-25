@@ -9,7 +9,7 @@
    #:program (short-program+command-name)
    form ...))
 
-(raco-comamnd-line
+(raco-command-line
  #:args (lecture-name)
  (define lecture-path (format "./~a/main.rkt" lecture-name))
  (dynamic-require lecture-path #f))
