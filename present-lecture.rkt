@@ -1,7 +1,7 @@
 #lang racket
 
 (require command-line-ext
-         racket/runtime-path)
+         raco/command-name)
 
 
 (define-syntax-rule (raco-command-line form ...)
