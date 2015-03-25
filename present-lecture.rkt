@@ -4,8 +4,12 @@
          racket/runtime-path)
 
 
-(command-line-ext
- #:program "raco present"
+(define-syntax-rule (raco-command-line form ...)
+  (command-line-ext
+   #:program (short-program+command-name)
+   form ...))
+
+(raco-comamnd-line
  #:args (lecture-name)
  (define lecture-path (format "./~a/main.rkt" lecture-name))
  (dynamic-require lecture-path #f))
