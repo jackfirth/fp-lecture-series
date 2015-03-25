@@ -5,6 +5,8 @@
 
 (title-slide (t "Functions and Composition in Javascript"))
 
+(define topics void)
+
 (topics
  "pure functions"
  "simple composition with monadic functions"
