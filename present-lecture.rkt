@@ -5,7 +5,7 @@
 
 
 (command-line-ext
- #:program "present"
+ #:program "raco present"
  #:args (lecture-name)
  (define lecture-path (format "./~a/main.rkt" lecture-name))
  (dynamic-require lecture-path #f))
