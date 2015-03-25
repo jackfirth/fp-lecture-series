@@ -5,4 +5,4 @@
    (list "lecture-present"
          "./present-lecture.rkt"
          "Runs FP lectures"
-         100)))
+         #f)))
