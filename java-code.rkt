@@ -7,7 +7,9 @@
 (provide java-code
          java-code-scaled
          java-code-small
-         java-code-smaller)
+         java-code-smaller
+         java-code-large
+         java-code-larger)
 
 
 (define-syntax-rule (java-code code ...)
@@ -22,3 +24,9 @@
 
 (define-syntax-rule (java-code-small code ...)
   (java-code-scaled .75 code ...))
+
+(define-syntax-rule (java-code-large code ...)
+  (java-code-scaled 1.25 code ...))
+
+(define-syntax-rule (java-code-larger code ...)
+  (java-code-scaled 1.5 code ...))
