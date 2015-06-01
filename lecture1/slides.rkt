@@ -1,11 +1,8 @@
 #lang at-exp slideshow
 
-(require "java-code.rkt"
+(require "../java-code.rkt"
          fancy-app
-         "slide-templates.rkt")
-
-(define (center-para . elements)
-  (apply para #:align 'center elements))
+         "../slide-templates.rkt")
 
 
 (title-slide (t "Functions and Composition in Javascript"))
@@ -76,9 +73,6 @@
                          var findObjects = R.filter(isObject);
                          var findWithEid = R.filter(R.has("eid"));
                          var findEntities = R.compose(findWithEid, findObjects);})
-
-(define (alternating-elements . elements)
-  (map list elements))
 
 (slide #:title "Designing dyadics"
        (center-para "Loading entities is very common. Let's make it a well-designed dyadic")
